@@ -150,6 +150,7 @@ public OnClientPutInServer(client)
 	//{
 	//	SetArrayCell(StatsBought, client, 0, j);
 	//}
+	PrintToChat(client, "[CMVM]Welcome to Chaos MVM! Use /buy to purchase upgrades and /reset to reset your upgrades.");
 }
 
 // Set Effect Value
@@ -395,12 +396,15 @@ public Action:Command_ResetStats(client, args)
 {
 	if(!GetConVarBool(cvar_UseStations))
 	{
-		SetEntProp(client, Prop_Send, "m_nCurrency", GetEntProp(client, Prop_Send, "m_nCurrency") + SpentCreds[client]);
-		SpentCreds[client] = 0;
-		SpentCheckpoint[client] = 0;
-		Checkpoint[client] = 0;
-		ResetPlayer(client);
-		PrintToConsole(client, "[CMVM]Reset Stats and refunded Credits.");
+		if(IsPlayerAlive(client))
+		{
+			SetEntProp(client, Prop_Send, "m_nCurrency", GetEntProp(client, Prop_Send, "m_nCurrency") + SpentCreds[client]);
+			SpentCreds[client] = 0;
+			SpentCheckpoint[client] = 0;
+			Checkpoint[client] = 0;
+			ResetPlayer(client);
+			PrintToConsole(client, "[CMVM]Reset Stats and refunded Credits.");
+		}
 	}
 	return Plugin_Handled;
 }
@@ -457,7 +461,7 @@ public CreateShopPanel(client)
 		DrawPanelItem(panel, "Primary");
 		DrawPanelItem(panel, "Secondary");
 		DrawPanelItem(panel, "Melee");
-		DrawPanelItem(panel, "PDA/Sapper");
+		DrawPanelItem(panel, "PDA");
 		DrawPanelItem(panel, "Watch");
 		DrawPanelItem(panel, "Player");
 		DrawPanelItem(panel, "Canteen");
@@ -1045,9 +1049,12 @@ ResetAllPlayers()
 	{
 		if(IsClientInGame(i))
 		{
-			SetEntProp(i, Prop_Send, "m_nCurrency", GetEntProp(i, Prop_Send, "m_nCurrency") + SpentCreds[i]);
-			SpentCreds[i] = 0;
-			ResetPlayer(i);
+			if(IsPlayerAlive(i))
+			{
+				SetEntProp(i, Prop_Send, "m_nCurrency", GetEntProp(i, Prop_Send, "m_nCurrency") + SpentCreds[i]);
+				SpentCreds[i] = 0;
+				ResetPlayer(i);
+			}
 		}
 	}
 }

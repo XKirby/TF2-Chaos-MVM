@@ -4004,9 +4004,9 @@
 		
 		"minigun spinup time decreased"
 		{
-			"menuname"	"Minigun Spin-Up Delay -20%"
+			"menuname"	"Minigun Spin-Up Delay -15%"
 			"cost"		"250"
-			"upgrade"	"-0.2"
+			"upgrade"	"-0.15"
 			"max"		"4"
 			"start"		"0.9"
 		}
@@ -4335,11 +4335,11 @@
 			"start"		"1.0"
 		}
 		
-		"engy sentry fire rate increased"
+		"self dmg push force increased"
 		{
-			"menuname"	"Sentry Firing Delay -20%"
-			"cost"		"500"
-			"upgrade"	"-0.2"
+			"menuname"	"Self-Damage Push Force +25%"
+			"cost"		"400"
+			"upgrade"	"0.25"
 			"max"		"4"
 			"start"		"1.0"
 		}
@@ -4353,15 +4353,6 @@
 			"menuname"	"Weapon Switch Delay -15%"
 			"cost"		"300"
 			"upgrade"	"-0.15"
-			"max"		"4"
-			"start"		"1.0"
-		}
-		
-		"engy sentry fire rate increased"
-		{
-			"menuname"	"Sentry Firing Delay -10%"
-			"cost"		"500"
-			"upgrade"	"-0.1"
 			"max"		"4"
 			"start"		"1.0"
 		}
@@ -4393,7 +4384,7 @@
 			"menuname"	"Sentry Firing Delay -10%"
 			"cost"		"350"
 			"upgrade"	"-0.1"
-			"max"		"5"
+			"max"		"2"
 			"start"		"1.0"
 		}
 		
@@ -4755,7 +4746,7 @@
 			"menuname"	"Charge Rate +25%"
 			"cost"		"200"
 			"upgrade"	"0.25"
-			"max"		"6"
+			"max"		"4"
 			"start"		"1.0"
 		}
 		
@@ -4822,7 +4813,7 @@
 			"menuname"	"Charge Rate +25%"
 			"cost"		"200"
 			"upgrade"	"0.25"
-			"max"		"6"
+			"max"		"4"
 			"start"		"1.0"
 		}
 		
@@ -4889,7 +4880,7 @@
 			"menuname"	"Charge Rate +25%"
 			"cost"		"100"
 			"upgrade"	"0.25"
-			"max"		"5"
+			"max"		"3"
 			"start"		"1.25"
 		}
 		
@@ -4911,21 +4902,12 @@
 			"start"		"1.0"
 		}
 		
-		"heal on hit for slowfire"
+		"heal on kill"
 		{
-			"menuname"	"+10 Health on Hit"
+			"menuname"	"+25 Health on Kill"
 			"cost"		"200"
-			"upgrade"	"10.0"
-			"max"		"5"
-			"start"		"0.0"
-		}
-		
-		"slow enemy on hit major"
-		{
-			"menuname"	"On Hit: +2 Seconds of -40% Movement Speed"
-			"cost"		"350"
-			"upgrade"	"2.0"
-			"max"		"5"
+			"upgrade"	"25.0"
+			"max"		"6"
 			"start"		"0.0"
 		}
 		
@@ -4947,28 +4929,10 @@
 			"start"		"0.0"
 		}
 		
-		"minicrits become crits"
-		{
-			"menuname"	"Minicrits Become Crits"
-			"cost"		"800"
-			"upgrade"	"1.0"
-			"max"		"1"
-			"start"		"0.0"
-		}
-		
 		"drop health pack on kill"
 		{
 			"menuname"	"On Kill: Drop Small Health Pack"
 			"cost"		"800"
-			"upgrade"	"1.0"
-			"max"		"1"
-			"start"		"0.0"
-		}
-		
-		"mad milk syringes"
-		{
-			"menuname"	"On Hit: Apply Mad Milk"
-			"cost"		"200"
 			"upgrade"	"1.0"
 			"max"		"1"
 			"start"		"0.0"
